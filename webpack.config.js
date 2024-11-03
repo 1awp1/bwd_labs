@@ -26,6 +26,30 @@ module.exports = {
             chunks: ['index'],
             filename: 'index.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/task.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'task.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/add-task.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'add-task.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/projects.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'projects.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/about.html',
+            inject: true,
+            chunks: ['index'],
+            filename: 'about.html'
+        }),
 
     ],
 
