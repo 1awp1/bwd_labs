@@ -10,6 +10,8 @@
   --font-main: Arial, sans-serif;
   --bg-btn: #020202;
   --color-btn: #ffffff;
+  --dialog-bg: #b2b2b2;
+  --dialog-text: #ffffff;
 }
 .dark-mode {
   --primary-bg: #121212;
@@ -23,6 +25,8 @@
   --font-main: Arial, sans-serif;
   --bg-btn: #ffffff;
   --color-btn: #000000;
+  --dialog-bg: #000000;
+  --dialog-text: #fcf7f7;
 }
 body {
   font-family: var(--font-main);
@@ -244,9 +248,9 @@ a:hover {
   color: #8e8e8e;
 }
 #taskDialog {
-  border: solid 5px white;
-  color: var(--primary-text);
-  background-color: var(--primary-bg);
+  border: solid 3px white;
+  color: var(--dialog-text);
+  background-color: var(--dialog-bg);
 }
 main {
   text-align: center;
