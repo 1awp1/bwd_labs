@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="css/styly.css" />
-    <link rel="shortcut icon" href="https://sun9-57.userapi.com/impg/LwSjNz2JTuNHGX5s-41MkGR_Bt2bpXWt8eIMpQ/f6N9rTWnVQM.jpg?size=126x89&quality=96&sign=964512da46a83cae6e05ef5e8fd8eee7&type=album" type="imge/x-icon" />
+    <link rel="stylesheet" href="css/styly.css" id="theme" />
+    <link
+      rel="shortcut icon"
+      href="https://sun9-57.userapi.com/impg/LwSjNz2JTuNHGX5s-41MkGR_Bt2bpXWt8eIMpQ/f6N9rTWnVQM.jpg?size=126x89&quality=96&sign=964512da46a83cae6e05ef5e8fd8eee7&type=album"
+      type="imge/x-icon"
+    />
   </head>
   <body>
     <header>
@@ -21,12 +25,14 @@
           <div></div>
           <div></div>
           <div></div>
+          <div></div>
         </div>
         <ul class="nav-links">
           <li class="active"><a href="index.html">Главная</a></li>
           <li><a href="projects.html">Проекты</a></li>
           <li><a href="task.html">Список задач</a></li>
           <li><a href="about.html">О приложении</a></li>
+          <li><button id="SwitchMode">Тема</button></li>
         </ul>
       </nav>
     </header>
@@ -64,6 +70,25 @@
           setTimeout(() => {
             navLinks.style.display = "none"; // Скрываем меню
           }, 300); // Задержка для плавного эффекта
+        }
+      });
+
+      const toggleButton = document.getElementById("SwitchMode");
+
+      // Проверяем, сохранена ли тема в localStorage
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+
+      // Обработчик события для переключения темы
+      toggleButton.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        // Сохраняем текущую тему в localStorage
+        if (document.body.classList.contains("dark-mode")) {
+          localStorage.setItem("theme", "dark");
+        } else {
+          localStorage.setItem("theme", "light");
         }
       });
     </script>
